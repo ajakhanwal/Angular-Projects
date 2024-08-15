@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="panel panel-default currency-panel">
+        <div class="panel-heading"><h2>Currency Convertor</h2></div>
+        <div class="panel-body">
+        <form [formGroup]="currencyForm" (ngSubmit)="submitForm()">
+            <div class="form-group">
+                <label for="exampleAmount">Amount</label>
+                <input type="amount" class="form-control" placeholder="Enter Amount" formControlName="amount" (change)="changeAmountValue()">
+            </div>
+            <div class="flex">
+                <div class="form-group">
+                    <label for="changeFrom">From</label>
+                    <input type="text" class="form-control" formControlName="from" (change)="changeCurrency()" >
+                  </div>
+                  <div class="form-group">
+                    <label for="abcd" class="v-hidden">aa</label>
+                    <button type="button" class="btn btn-secondary round-btn" (click)="switchCurrency()">S</button>
+                  </div>
+                  <div class="form-group">
+                    <label for="changeTo">To</label>
+                    <input type="text" class="form-control" formControlName="to" (change)="changeCurrency()">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form></div>
+      </div>    
+</div>
