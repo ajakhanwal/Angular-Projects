@@ -3,3 +3,14 @@
 body{
     background-color: #563D7C;
 }
+
+.app-button{
+    background-color: #616E7E;
+    height: 60px;
+    border-color: #525d6a;
+}
+
+.app-button:hover{
+    background-color: #AAD4C8;
+    border-color: #8bb5a9;
+}

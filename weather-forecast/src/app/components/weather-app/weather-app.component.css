@@ -1,0 +1,63 @@
+.weather-widget {
+    background-color: #fff;
+    padding: 0px;
+    border-radius: 10px;
+    width: 720px;
+    min-height: 400px;
+}
+.weather-widget h2 {
+    margin-top: 0;
+    padding: 20px;
+    background-color: #4b4848;
+    color: #fff;
+}
+ 
+.widget-boby{
+    padding: 20px;
+}
+ 
+.widget-boby .form-control{
+    background: #ccc;
+    border-radius: 0;
+     height: 60px;
+ 
+}
+ 
+.widget-boby .apply-btn{
+  border-radius: 0;
+  padding: 10px;
+  font-size: 25px;
+  background-color: #c82333;
+}
+ 
+.widget-boby label{
+    font-weight: 800;;
+}
+ 
+.forecast {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    overflow-x: auto;
+}
+.day {
+    text-align: center;
+    flex: 0 0 auto;
+    width: 100px;
+}
+.day img {
+    width: 50px;
+    height: 50px;
+}
+.apply-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: red;
+    color: #fff;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}

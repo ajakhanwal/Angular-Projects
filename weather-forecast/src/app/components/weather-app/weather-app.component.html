@@ -1,0 +1,23 @@
+<div class="weather-widget">
+    <div class="widget-title"> <h2>Weather Forecast</h2> </div>
+    <div class="widget-boby">
+        <label for="city">City</label>
+        <select id="city" class="form-select">
+            <option *ngFor="let city of cities">{{city}}</option>
+        </select>
+        <select class="form-select" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        <div id="forecast" class="forecast"></div>
+        <div class="row">
+            <div class="col-md-8">
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-danger apply-btn" (click)="fetchWeather()">Apply</button>    
+            </div>           
+        </div>
+    </div>
+</div>
