@@ -49,6 +49,39 @@
       "title": "task20",
       "note": "abab",
       "id": 12
+    },
+    {
+      "title": "dddddd",
+      "note": "next wednesday",
+      "id": 13
+    },
+    {
+      "title": "NewNote",
+      "note": "Testing type",
+      "type": "Work",
+      "time": "22:20",
+      "id": 14
+    },
+    {
+      "title": "newnoe11",
+      "note": "testt",
+      "type": "Work",
+      "time": "08:00",
+      "id": 15
+    },
+    {
+      "title": "bbbd",
+      "note": "sssnsn",
+      "type": "Personal",
+      "time": "20:09",
+      "id": 16
+    },
+    {
+      "title": "dsjsns",
+      "note": "shss",
+      "type": "Social",
+      "time": "04:30",
+      "id": 17
     }
   ]
 }

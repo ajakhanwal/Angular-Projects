@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="panel panel-default currency-panel">
+      <div class="text-center">
+        <img class="app-logo" src="assets\images\5902.jpg">
+      </div>
+        <div class="panel-heading text-center"><h2>CURRENCY CONVERTOR</h2></div>
+        <div class="panel-body">
+        <form (ngSubmit)="submitForm()">
+            <div class="form-group">             
+                <label for="exampleAmount"><strong>Amount</strong></label>
+                <!-- <span class="prefix">{{from_symbol}}</span> -->
+                 <!-- {{this.from | json}} -->
+                 <!-- {{this.from.currencies.Amount.symbol}} -->
+                  <div>
+                    <input class="form-control mt-2" required lang="en-US" type="number" [(ngModel)]="amount_value" (change)="changeAmountValue()" name="amount" (focusout)="changeAmountValue()" #amount_input placeholder="Amount" step="0.01" >
+                  </div>
+            </div>
+            <div style="border: 1px solid #282">
+              <div class="flex">
+                <div class="flex-item">
+                    <label for="changeFrom">From</label>           
+                    <app-currency-selector #from [selectorId]="'from'" [changeCurrency]="selectFrom"></app-currency-selector>
+                  </div>
+                  <div class="switch-wrap">
+                    <label for="abcd" class="v-hidden">Switch</label>
+                    <button type="button" class="btn btn-link round-btn" (click)="switchCurrencies()"><img src="assets\images\switch-button.jpg"></button>
+                  </div>
+                  <div class="flex-item">
+                    <label for="changeTo">To</label>
+                    <!-- <input type="text" class="form-control" formControlName="to" (change)="changeCurrency()"> -->
+                    <app-currency-selector #to [selectorId]="'to'" [changeCurrency]="selectTo"></app-currency-selector>
+                </div>
+            </div>
+            </div>
+            <div>
+              <button type="submit" class="btn btn-primary btn-block app-button"  *ngIf="!isResult">Convertor</button>
+            </div>
+        </form></div>
+        <div class="result-currency" *ngIf="isResult">
+          <div class="result-from">
+            {{resultFrom}}
+          </div>
+  
+            <div class="result-to">
+              {{resultTo}}
+              </div>
+              <div class="result-info">
+              {{resultInfo}}
+                </div>
+        </div>
+      </div>
+</div>

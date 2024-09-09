@@ -1,20 +1,18 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { AppRoutingModule } from './app-routing.module';
+import { ToDoRoutingModule } from './to-do-routing.module';
 
-
-import { AppComponent } from './app.component';
 import { TodoComponent } from './components/todo/todo.component';
 import { AddTaskComponent } from './components/add-task/add-task.component';
 import { EditTaskComponent } from './components/edit-task/edit-task.component';
 import { DeleteTaskComponent } from './components/delete-task/delete-task.component';
 import { ViewTaskComponent } from './components/view-task/view-task.component';
 
+
 @NgModule({
   declarations: [
-    AppComponent,
     TodoComponent,
     AddTaskComponent,
     EditTaskComponent,
@@ -22,12 +20,10 @@ import { ViewTaskComponent } from './components/view-task/view-task.component';
     ViewTaskComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
+    CommonModule,
+    ToDoRoutingModule,
     ReactiveFormsModule,
     HttpClientModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  ]
 })
-export class AppModule { }
+export class ToDoAppModule { }

@@ -1,0 +1,38 @@
+<div class="weather-widget">
+    <div class="widget-title"> <h2>Weather Forecast</h2> </div>
+    <div class="widget-boby">
+        <label for="city">City</label>
+        <select id="city" class="form-select city-dropdown" [(ngModel)]="selectedCity" (change)="changeCity()">
+            <option selected>{{selectedCity}}</option>
+            <option *ngFor="let city of cities" [value]="city">{{city}}</option>
+        </select>
+        <div id="forecast" class="forecast">
+            <div *ngFor="let forecastday of forecast">
+                    <div>
+                        {{ forecastday.valid_date | date:'MMM d' }}
+                    </div>
+                    <div>
+                        {{ forecastday.valid_date | date:'EEEE' }}
+                    </div>
+                
+                    <div>
+                        {{forecastday.temp}}°C
+                    </div>
+                    <div>
+                        <img [src]="imgPath + forecastday.weather.icon + '.png'">
+                        <div>
+                            {{forecastday.weather.description}}
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-danger apply-btn" (click)="fetchWeather()">Apply</button>    
+            </div>           
+        </div>
+    </div>
+</div>
+

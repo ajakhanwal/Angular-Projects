@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators} from '@angular/forms';
-import {TaskService} from "../../task.service";
+import {TaskService} from "../../service/task.service";
 import { Router } from '@angular/router'
 
 @Component({
